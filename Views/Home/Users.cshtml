@@ -1,0 +1,28 @@
+@model List<Users>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"># Registro</th>
+                    <th scope="col">Nombre</th>
+                    <th class="col">Apellido</th>
+                    <th class="col">Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach(var user in Model.ToList()){
+                    <tr>
+                            <th>#@user.Id</th>
+                            <td>@user.Name</td>
+                            <td>@user.Surname</td>
+                            <td>@user.Age</td>
+                    </tr>        
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
